@@ -13,7 +13,6 @@
 .table thead th {
   color: #3b21cc !important;
   font-weight: 600;
-  text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
   padding: 1rem;
@@ -56,7 +55,31 @@
   font-weight: 500;
   color: #ffffff;
   transition: all 0.3s ease;
-  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #e40606 0%, #fffb00 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+.btn-danger {
+  background: linear-gradient(135deg, #e40606 0%, #700505 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s ease;
   letter-spacing: 0.5px;
   display: inline-block;
 }

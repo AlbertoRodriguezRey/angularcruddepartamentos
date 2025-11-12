@@ -1,0 +1,16 @@
+<h1>Edit departamento</h1>
+<a [routerLink]="['/home']" class="btn btn-danger">Pal lobby</a>
+@if (departamento) {
+    <form #editForm="ngForm">
+        <label>Id: </label>
+        <input type="number" #cajaid name="cajaid" value="{{departamento.numero}}">
+        <br/>
+        <label>Nombre: </label>
+        <input type="text" #cajanombre name="cajanombre" value="{{departamento.nombre}}">
+        <br/>
+        <label>Localidad: </label>
+        <input type="text" #cajalocalidad name="cajalocalidad" value="{{departamento.localidad}}">
+        <br/>
+        <button class="btn btn-primary" (click)="updateDepartamento()">Guardar cambios</button>
+    </form>
+}

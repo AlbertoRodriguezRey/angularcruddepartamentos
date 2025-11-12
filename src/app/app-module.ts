@@ -10,6 +10,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { ServiceDepartamentos } from './services/service.departamentos';
 import { CreateComponent } from './components/create-component/create-component';
 import { DetailsComponent } from './components/details-component/details-component';
+import { EditComponent } from './components/edit-component/edit-component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DetailsComponent } from './components/details-component/details-compone
     MenuComponent,
     DepartamentosComponent,
     CreateComponent,
-    DetailsComponent
+    DetailsComponent,
+    EditComponent,
   ],
   imports: [
     FormsModule,

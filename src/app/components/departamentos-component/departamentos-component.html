@@ -6,7 +6,6 @@
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Localidad</th>
-                    <th>Detalles</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,6 +17,12 @@
                         <td>
                             <a [routerLink]="['/details/',departamento.numero,departamento.nombre,departamento.localidad]" class="btn btn-info">
                                 Details
+                            </a>
+                            <a [routerLink]="['/edit/',departamento.numero]" class="btn btn-warning">
+                                Edit
+                            </a>
+                            <a class="btn btn-danger" (click)="confirmDelete(departamento.numero)">
+                                Delete
                             </a>
                         </td>
                     </tr>

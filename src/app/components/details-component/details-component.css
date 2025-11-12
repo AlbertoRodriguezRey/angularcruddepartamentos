@@ -1,0 +1,110 @@
+:host {
+  --primary: #5b6cb8;      /* muted indigo */
+  --accent:  #7f8ad9;      /* lighter accent */
+  --muted:   #6b7280;      /* gray text */
+  --surface: #fbfdff;      /* card background */
+  display: block;
+  padding: 1.25rem;
+}
+
+/* Container visual */
+:host > div {
+  max-width: 680px;
+  margin: 1.5rem auto;
+  background: linear-gradient(180deg, var(--surface) 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(38, 55, 95, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.06);
+}
+
+/* Heading */
+:host h1 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.6rem;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Back button (scoped to this component) */
+:host a.btn-danger {
+  background: linear-gradient(90deg, #ef6f6f 0%, #e05353 100%);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(224, 83, 83, 0.12);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
+:host a.btn-danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(224, 83, 83, 0.16);
+}
+
+/* List group styling (uses Bootstrap classes but restyled) */
+:host .list-group {
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 -1px 0 rgba(15, 23, 42, 0.02);
+  background: #fff;
+  border: 1px solid rgba(99, 102, 241, 0.03);
+}
+
+/* Each list item */
+:host .list-group-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  transition: background-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+/* Subtle label style on left and value bold on right if needed */
+:host .list-group-item::before {
+  content: none; /* keep Bootstrap list markup intact; use markup for labels if desired */
+}
+
+/* Hover and focus for items */
+:host .list-group-item:hover,
+:host .list-group-item:focus {
+  background: linear-gradient(90deg, rgba(127,138,217,0.04), rgba(127,138,217,0.02));
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.06);
+  color: #24303f;
+  outline: none;
+}
+
+/* Value emphasis */
+:host .list-group-item strong,
+:host .list-group-item b {
+  color: #283046;
+  font-weight: 600;
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+:host .list-group-item {
+  animation: fadeInUp 360ms ease both;
+}
+:host .list-group-item:nth-child(1) { animation-delay: 0.03s; }
+:host .list-group-item:nth-child(2) { animation-delay: 0.07s; }
+:host .list-group-item:nth-child(3) { animation-delay: 0.11s; }
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  :host > div { padding: 1rem; margin: 1rem; }
+  :host h1 { font-size: 1.25rem; }
+  :host .list-group-item { padding: 0.7rem 0.9rem; font-size: 0.95rem; }
+}
