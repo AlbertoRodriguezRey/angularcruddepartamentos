@@ -1,0 +1,28 @@
+<div>
+    @if (departamentos.length > 0) {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Localidad</th>
+                    <th>Detalles</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (departamento of departamentos; track departamento) {
+                    <tr>
+                        <td>{{departamento.numero}}</td>
+                        <td>{{departamento.nombre}}</td>
+                        <td>{{departamento.localidad}}</td>
+                        <td>
+                            <a [routerLink]="['/details/',departamento.numero,departamento.nombre,departamento.localidad]" class="btn btn-info">
+                                Details
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

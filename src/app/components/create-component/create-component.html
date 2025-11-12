@@ -1,0 +1,73 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">
+            <i class="bi bi-plus-circle me-2"></i>
+            Crear Departamento
+          </h2>
+        </div>
+        <div class="card-body p-4">
+          <form>
+            <div class="mb-4">
+              <label for="id" class="form-label fw-semibold">
+                ID del Departamento
+              </label>
+              <input 
+                type="number" 
+                id="id" 
+                name="id" 
+                #id 
+                class="form-control form-control-lg"
+                placeholder="Ingrese el ID">
+            </div>
+
+            <div class="mb-4">
+              <label for="nombre" class="form-label fw-semibold">
+                Nombre del Departamento
+              </label>
+              <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                #nombre 
+                class="form-control form-control-lg"
+                placeholder="Ingrese el nombre">
+            </div>
+
+            <div class="mb-4">
+              <label for="localidad" class="form-label fw-semibold">
+                Localidad
+              </label>
+              <input 
+                type="text" 
+                id="localidad" 
+                name="localidad" 
+                #localidad 
+                class="form-control form-control-lg"
+                placeholder="Ingrese la localidad">
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button 
+                type="button" 
+                class="btn btn-secondary btn-lg me-md-2"
+                routerLink="/home">
+                <i class="bi bi-x-circle me-2"></i>
+                Cancelar
+              </button>
+              <button 
+                type="button" 
+                class="btn btn-primary btn-lg"
+                (click)="insertarDepartamento()">
+                <i class="bi bi-check-circle me-2"></i>
+                Crear Departamento
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
